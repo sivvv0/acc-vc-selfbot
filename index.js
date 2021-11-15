@@ -27,11 +27,8 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
 client.login(config.Token);
 
 async function joinVC(client, config) {
-    const guild = await client.guilds.cache.get(config.Guild);
-    await guild.channels.cache.get(config.Channel).join()
-        .then(connection => {
-            connection.voice.setSelfDeaf(false);
-            connection.voice.setSelfMute(true);
-        })
-        .catch(error => console.error(error));
+    const guild = client.guilds.cache.get(config.Guild);
+    const voicechannel = guild.channels.cache.get(config.Channel);
+    const connect = await voicechannel.join();
+    connect.voice.setSelfMute(true);
 }
