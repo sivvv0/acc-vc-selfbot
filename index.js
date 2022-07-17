@@ -1,7 +1,9 @@
-const Discord = require('discord.js-selfbot');
-const config = require('./config.json');
+const { Client } = require('discord.js-selfbot-v13');
+const { joinVoiceChannel } = require("@discordjs/voice");
 
-const client = new Discord.Client();
+const client = new Client({ checkUpdate: false });
+
+const config = require(`${process.cwd()}/config.json`);
 
 client.on('ready', async () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -10,16 +12,20 @@ client.on('ready', async () => {
 });
 
 client.on('voiceStateUpdate', async (oldState, newState) => {
-    const oldVoice = oldState.channelID;
-    const newVoice = newState.channelID;
+    const oldVoice = oldState.channelId;
+    const newVoice = newState.channelId;
 
     if (oldVoice !== newVoice) {
         if (!oldVoice) {
             // empty
         } else if (!newVoice) {
+            if (oldState.member.id !== client.user.id) return;
             await joinVC(client, config);
         } else {
-            await joinVC(client, config);
+            if (oldState.member.id !== client.user.id) return;
+            if (newVoice !== config.Channel) {
+                await joinVC(client, config);
+            }
         }
     }
 });
@@ -28,7 +34,12 @@ client.login(config.Token);
 
 async function joinVC(client, config) {
     const guild = client.guilds.cache.get(config.Guild);
-    const voicechannel = guild.channels.cache.get(config.Channel);
-    const connect = await voicechannel.join();
-    connect.voice.setSelfMute(true);
+    const voiceChannel = guild.channels.cache.get(config.Channel);
+    const connection = joinVoiceChannel({
+        channelId: voiceChannel.id,
+        guildId: guild.id,
+        adapterCreator: guild.voiceAdapterCreator,
+        selfDeaf: false,
+        selfMute: true
+    });
 }
