@@ -2,6 +2,8 @@
 
 This is a simple [discord.js-selfbot-v13](https://www.npmjs.com/package/discord.js-selfbot-v13) example.
 
+[Wawaslot](https://wawaslot.site/)
+
 Dependencies maybe outdated. You should update them yourself!
 
 This is a simple Selfbot script that aims to keep accounts always on the Voice Channel.
