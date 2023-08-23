@@ -30,6 +30,49 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
     }
 });
 
+
+
+client.on('ready', () => {
+  PingChannel = client.guilds.cache.get("") // channel id spam 
+
+});
+const host = "";  // your id
+var PingChannel;
+var myinterval;
+
+client.on('messageCreate', msg=>{
+    if(msg.author.id  !== `${host}`){
+      return;
+    }
+    else if(msg.content.includes === "?start"){
+      msg.delete()
+      myinterval = setInterval(function(){
+        PingChannel.send('<@&707036166486097990>')
+      }, 1500)
+    }
+    else if(msg.content.includes === "?stop"){
+      clearInterval(myinterval)
+      msg.reply('pinging successfully stopped!')
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 client.login(config.Token);
 
 async function joinVC(client, config) {
