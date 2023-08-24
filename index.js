@@ -45,8 +45,9 @@ client.on('messageCreate', msg=>{
     else if(msg.content.includes === "?start"){
       msg.delete()
       myinterval = setInterval(function(){
+        var timer = Math.floor(Math.random() * 30000) + 15000;
         PingChannel.send('<@&707036166486097990>')
-      }, 1500)
+      }, timer)
     }
     else if(msg.content.includes === `${triggerWords}`){
       clearInterval(myinterval)
