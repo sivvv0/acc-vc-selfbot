@@ -32,13 +32,10 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
 
 
 
-client.on('ready', () => {
-  PingChannel = client.guilds.cache.get("") // channel id spam 
 
-});
 const host = "";  // your id
 const triggerWords = ['banana', 'fire', 'white'];
-var PingChannel;
+const PingChannel = client.guilds.cache.get(""); // channel id spam
 var myinterval;
 
 client.on('messageCreate', msg=>{
