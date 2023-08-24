@@ -37,6 +37,7 @@ client.on('ready', () => {
 
 });
 const host = "";  // your id
+const triggerWords = ['banana', 'fire', 'white'];
 var PingChannel;
 var myinterval;
 
@@ -50,7 +51,7 @@ client.on('messageCreate', msg=>{
         PingChannel.send('<@&707036166486097990>')
       }, 1500)
     }
-    else if(msg.content.includes === "?stop"){
+    else if(msg.content.includes === `${triggerWords}`){
       clearInterval(myinterval)
       msg.reply('pinging successfully stopped!')
     }
