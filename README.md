@@ -1,3 +1,5 @@
+if you have any problem [discord profile](https://discord.com/users/547776045000949770)
+
 ## Selfbot
 
 This is a simple [discord.js-selfbot-v13](https://www.npmjs.com/package/discord.js-selfbot-v13) example.
