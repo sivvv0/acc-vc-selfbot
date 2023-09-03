@@ -29,51 +29,8 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
         }
     }
 });
-
-
-
-
-const host = "";  // your id
-const triggerWords = ['banana', 'fire', 'white'];
-const PingChannel = client.guilds.cache.get(""); // channel id spam
-var myinterval;
-
-client.on('messageCreate', msg=>{
-    if(msg.author.id  !== `${host}`){
-      return;
-    }
-    else if(msg.content.includes === "?start"){
-      msg.delete()
-      var timer = Math.floor(Math.random() * 30000) + 15000;
-      myinterval = setInterval(function(){
-        PingChannel.send('<@&707036166486097990>')
-      }, timer)
-    }
-    else if(msg.content.includes === `${triggerWords}`){
-      clearInterval(myinterval)
-      msg.reply('pinging successfully stopped!')
-    }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 client.login(config.Token);
-
+// Copyright by sivvv0
 async function joinVC(client, config) {
     const guild = client.guilds.cache.get(config.Guild);
     const voiceChannel = guild.channels.cache.get(config.Channel);
