@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "1mgr007",
+  "author": "sivvv0",
   "license": "MIT",
   "dependencies": {
     "node-pre-gyp": "^0.17.0",
