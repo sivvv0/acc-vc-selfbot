@@ -2,7 +2,7 @@
 
 This is a simple [discord.js-selfbot-v13](https://www.npmjs.com/package/discord.js-selfbot-v13) example.
 
-[Wawaslot](https://wawaslot.site/)
+
 
 Dependencies maybe outdated. You should update them yourself!
 
@@ -16,8 +16,3 @@ Please edit the `./config.json` file first.
 - Guild = Guild ID where the Voice Channel is.
 - Channel = Voice Channel ID.
 
-### Documentation
-
-[Document Website (recommend)](https://discordjs-self-v13.netlify.app/)
-
-[Extend Document (With Example)](https://github.com/aiko-chan-ai/discord.js-selfbot-v13/tree/main/Document)
