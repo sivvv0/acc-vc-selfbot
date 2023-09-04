@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+* sivan=detec
+* vc= true 
+* for (const sivan of tokens)
