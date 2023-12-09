@@ -14,8 +14,11 @@ Please edit the `./config.json` file first.
 
 ### Config Information
 
-```xml
-- Token = Secret Token Bot.
-- Guild = Guild ID where the Voice Channel is.
-- Channel = Voice Channel ID.```
+```json
+ {
+    "Token": "tokenhere",
+    "Guild": "", // guild that where spam be in
+    "Channel": "" // channel id for spam
+}
+```
 
