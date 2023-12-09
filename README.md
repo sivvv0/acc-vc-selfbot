@@ -22,3 +22,5 @@ Please edit the `./config.json` file first.
 }
 ```
 
+[![Discord Presence](https://lanyard.cnrad.dev/api/547776045000949770)](https://discord.com/users/547776045000949770)
+
