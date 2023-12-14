@@ -1,5 +1,5 @@
-- [x] if you have any problem [open poll](https://github.com/sivvv0/acc-vc/issues/new) 
-- [x] if you have any request [open ticket](https://github.com/sivvv0/acc-vc/issues/new)
+- [x] if you have any problem [open poll](https://github.com/sivvv0/acc-vc-selfbot/issues/new) 
+- [x] if you have any request [open ticket](https://github.com/sivvv0/acc-vc-selfbot/issues/new)
 
 ## Selfbot
 
