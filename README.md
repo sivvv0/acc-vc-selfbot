@@ -1,6 +1,7 @@
 - [x] if you have any problem [open poll](https://github.com/sivvv0/acc-vc-selfbot/issues/new) 
 - [x] if you have any request [open ticket](https://github.com/sivvv0/acc-vc-selfbot/issues/new)
 - [ ] **Replit banned selfbots**
+- [ ] you have to have a site for hosting this project like [nexcord](<https://nexcord.com>) or [waifly](<https://waifly.com>)
 
 ## Selfbot
 
